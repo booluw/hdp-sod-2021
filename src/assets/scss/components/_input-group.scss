@@ -85,4 +85,20 @@
   padding: 5rem 2rem;
   border-radius: 2rem;
   background: linear-gradient(45deg, rgba($color-kae, .4), rgba($color-mmr, .4));
+
+  &__img {
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    width: 40%;
+    margin: 0 auto;
+  }
 }

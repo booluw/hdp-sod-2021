@@ -20,7 +20,19 @@
   &--submit {
     background: $color-mmr;
     display: block;
-    padding: 1.5rem 10rem;
+    padding: 1.5rem 10%;
+    margin: 3rem auto;
+
+    &:hover,
+    &:active {
+      opacity: .8;
+      background: $color-mmr;
+    }
+  }
+
+  &--paystack {
+    display: block;
+    padding: 1.5rem 10%;
     margin: 3rem auto;
   }
 

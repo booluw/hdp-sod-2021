@@ -93,7 +93,18 @@ body {
 .btn--submit {
   background: #dd0e3a;
   display: block;
-  padding: 1.5rem 10rem;
+  padding: 1.5rem 10%;
+  margin: 3rem auto;
+}
+
+.btn--submit:hover, .btn--submit:active {
+  opacity: .8;
+  background: #dd0e3a;
+}
+
+.btn--paystack {
+  display: block;
+  padding: 1.5rem 10%;
   margin: 3rem auto;
 }
 
@@ -394,6 +405,61 @@ body {
   padding: 5rem 2rem;
   border-radius: 2rem;
   background: linear-gradient(45deg, rgba(7, 173, 188, 0.4), rgba(221, 14, 58, 0.4));
+}
+
+.form__img {
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .form {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.id-card {
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: #dd0e3a;
+  color: white;
+  width: 28rem;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+
+.id-card__img {
+  height: 20rem;
+  width: 100%;
+}
+
+.id-card__logo {
+  width: 3rem;
+  height: auto;
+  margin: 0 1rem;
+}
+
+.id-card__content {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.id-card__name {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.id-card__matric {
+  font-size: 2rem;
+}
+
+.id-card__dept {
+  font-size: 1.5rem;
 }
 
 .section {
