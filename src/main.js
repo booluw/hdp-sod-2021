@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import "../src/assets/css/main.css"
+import "../src/assets/css/bootstrap-grid.min.css"
+
 Vue.config.productionTip = false
 
 new Vue({

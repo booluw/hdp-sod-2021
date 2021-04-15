@@ -1,0 +1,88 @@
+.input-group {
+  display: block;
+  position: relative;
+  margin: 0 1rem 1.5rem;
+
+  &:not(.input-group--checkbox)::after {
+    position: absolute;
+    bottom: -.25rem;
+    right: 0;
+    left: 0;
+    content: "";
+    padding: .15rem;
+    background: linear-gradient(to left, $color-kae, $color-mmr);
+  }
+
+  &:focus-within::after {background: linear-gradient(to left, $color-mmr, $color-kae);}
+
+  &__label {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    opacity: .8;
+    color: black;
+    display: block;
+    font-weight: 900;
+  }
+
+  &__input,
+  &__select {
+    padding: .2rem;
+    font-size: 2rem;
+    border: none!important;
+    width: 100%;
+    background-color: transparent;
+
+    &:focus, &:hover {border: none!important;}
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    border-radius: .2rem;
+    padding: .7rem 1rem;
+    margin: .5rem 0;
+    margin-inline-end: 1rem;
+    background-color: rgba($color-dvs, .6);
+    border: .25rem solid $color-dvs;
+    cursor: pointer;
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    & .__checkbox {
+      display: block;
+      padding: .7rem;
+      margin-inline-end: 1rem;
+      border-radius: 50%;
+      background-color: transparent;
+      border: .25rem solid $color-dvs;
+    }
+
+    .__label {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 1.3rem;
+    }
+
+    input[type="radio"]:checked,
+    input[type="checkbox"] {
+      & ~ .__checkbox {
+        background-color: $color-dvs;
+        border-color: white;
+      }
+
+      & ~ .__label {
+        color: white;
+      }
+    }
+
+  }
+}
+
+.form {
+  padding: 5rem 2rem;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, rgba($color-kae, .4), rgba($color-mmr, .4));
+}

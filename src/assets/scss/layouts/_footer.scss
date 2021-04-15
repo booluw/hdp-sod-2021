@@ -1,0 +1,22 @@
+.footer {
+  padding: 3rem 1rem;
+  background-color: $color-mer;
+  border-top: .5rem solid $color-glt;
+
+  &__logo {
+    width: 3rem;
+    height: auto;
+    margin: 0 1rem;
+  }
+
+  &__text {font-size: 2rem;font-weight: 700;}
+
+  &__attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 0;
+    font-weight: 700;
+    opacity: .8;
+  }
+}

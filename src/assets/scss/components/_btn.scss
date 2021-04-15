@@ -1,0 +1,38 @@
+.btn {
+  display: inline-flex;
+  padding: 1rem 1.5rem;
+  border-radius: .3rem;
+  color: white;
+  font-weight: 700;
+  font-family: Raleway;
+  letter-spacing: .2rem;
+  background: linear-gradient(45deg, $color-kae, $color-mmr);
+  cursor: pointer;
+  transition: 300ms ease-in;
+  outline: none;
+  border: none;
+
+  &:hover,
+  &:active {
+    background: linear-gradient(45deg, $color-mmr, $color-kae);
+  }
+
+  &--submit {
+    background: $color-mmr;
+    display: block;
+    padding: 1.5rem 10rem;
+    margin: 3rem auto;
+  }
+
+  &:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn {
+    padding: 1.5rem 2.5rem;
+    border-radius: .5rem;
+  }
+}

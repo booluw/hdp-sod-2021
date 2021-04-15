@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem;
+  margin: 0 0 .5rem;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
+  &::after {
+    position: absolute;
+    bottom: -.5rem;
+    right: 5rem;
+    left: 0;
+    content: "";
+    padding: .25rem;
+    background: linear-gradient(to left, $color-kae, $color-mmr);
+  }
+
+  &__text {
+    margin-inline-start: 1rem;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 2rem 5rem;
+  }
+}

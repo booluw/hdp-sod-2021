@@ -1,0 +1,83 @@
+.accordion {
+  overflow: hidden;
+  border-radius: .5rem;
+  margin: 1rem 0 0;
+  border: .2rem solid lighten($color-cli, 25%);
+  color: black;
+
+  &__header {
+    cursor: pointer;
+    background-color: lighten($color-cli, 25%);
+    font-weight: 900;
+    padding: 1rem;
+    transition: 300ms ease-in;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+
+  &__paragraph {
+    padding: 1rem;
+    font-weight: 500;
+    background-color: lighten($color-cli, 35%);
+  }
+
+  &--mer {
+    border-color: lighten($color-mer, 25%);
+    .accordion__header {background-color: lighten($color-mer, 25%);}
+    .accordion__paragraph {background-color: lighten($color-mer, 35%);}
+  }
+
+  &--kae {
+    border-color: lighten($color-kae, 25%);
+    .accordion__header {background-color: lighten($color-kae, 25%);}
+    .accordion__paragraph {background-color: lighten($color-kae, 35%);}
+  }
+
+  &--dvs {
+    border-color: lighten($color-dvs, 25%);
+    color: white;
+    .accordion__header {background-color: lighten($color-dvs, 25%);}
+    .accordion__paragraph {background-color: lighten($color-dvs, 35%);}
+  }
+
+  &--eds {
+    border-color: lighten($color-eds, 25%);
+    color: white;
+    .accordion__header {background-color: lighten($color-eds, 25%);}
+    .accordion__paragraph {background-color: lighten($color-eds, 35%);}
+  }
+
+  &--kwc {
+    border-color: lighten($color-kwc, 25%);
+    .accordion__header {background-color: lighten($color-kwc, 25%);}
+    .accordion__paragraph {background-color: lighten($color-kwc, 35%);}
+  }
+
+  &--mmr {
+    border-color: lighten($color-mmr, 25%);
+    .accordion__header {background-color: lighten($color-mmr, 25%);}
+    .accordion__paragraph {background-color: lighten($color-mmr, 35%);}
+  }
+
+  &--kir {
+    border-color: lighten($color-kir, 25%);
+    .accordion__header {background-color: lighten($color-kir, 25%);}
+    .accordion__paragraph {background-color: lighten($color-kir, 35%);}
+  }
+
+  &--glt {
+    border-color: lighten($color-glt, 25%);
+    .accordion__header {background-color: lighten($color-glt, 25%);}
+    .accordion__paragraph {background-color: lighten($color-glt, 35%);}
+  }
+}
+
+@media (min-width: 1200px) {
+  .accordion {
+
+    &__header {padding: 2rem;}
+    &__paragraph {padding: 2rem;}
+  }
+}

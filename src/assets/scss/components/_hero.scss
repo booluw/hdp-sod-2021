@@ -1,0 +1,24 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to left, rgba($color-kae, .5), rgba($color-kae, .5));
+  padding: 5rem 2rem;
+  margin: 0 0 1rem;
+  height: 70vh;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: -.5rem;
+    right: 0;
+    left: 5rem;
+    content: "";
+    padding: .25rem;
+    background: linear-gradient(to left, $color-kae, $color-mmr);
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

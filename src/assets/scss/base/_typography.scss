@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Raleway;
+  src: url('../fonts/Raleway-VariableFont_wght.ttf');
+}
+
+.heading {
+  font-size: 2.5rem;
+  
+  &--super-main {
+    font-size: 3.5rem;
+    color: $color-kae;
+    font-weight: 900;
+    margin: 2rem 0;
+    text-transform: capitalize;
+  }
+
+  &--sub {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}
+
+@supports(-webkit-background-clip: text) {
+  .heading--super-main {
+    background-image: linear-gradient(45deg, $color-mmr, $color-kae);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
+}
+
+.paragraph {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .heading {
+    font-size: 5rem;
+
+    &--super-main {
+      font-size: 6rem;
+    }
+
+    &--sub {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../scss/abstract/colors";
+
+@import "../scss/base/typography",
+        "../scss/base/base";
+
+@import "../scss/components/btn",
+        "../scss/components/hero",
+        "../scss/components/accordion",
+        "../scss/components/card",
+        "../scss/components/input-group";
+
+@import "../scss/layouts/section",
+        "../scss/layouts/header",
+        "../scss/layouts/footer";
