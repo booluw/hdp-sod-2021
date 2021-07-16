@@ -12,11 +12,15 @@ window.db = db;
 
 export default new Vuex.Store({
   state: {
-    user: {}
+    user: {},
+    users: []
   },
   mutations: {
     COMMIT_USER: (state, payload) => {
       state.user = payload
+    },
+    COMMIT_USERS: (state, payload) => {
+      state.users = payload
     }
   },
   actions: {
@@ -28,7 +32,8 @@ export default new Vuex.Store({
           dept: payload.dept,
           campus: payload.campus,
           gender: payload.gender,
-          img: payload.image
+          img: payload.image,
+          matric: payload.matric
         }).then(() => {
           commit('COMMIT_USER', payload)
           resolve('Data added')
@@ -53,26 +58,13 @@ export default new Vuex.Store({
     },
     checkCoupon({commit}, payload) {
       return new Promise((resolve, reject) => {
-        db.collection("tokens").onSnapshot((querySnapshot) => {
-          let tokens = [];
-          querySnapshot.forEach((doc) => {
-            if(doc.data().token === payload) {
-              console.log(`${payload} is same as ${doc.data().token}`)
-              if(doc.data().isUsed === false) {
-                console.log(`${doc.data().token}'s isUsed returned ${doc.data().isUsed}`)
-                //  Returns doc.id to use for updating token as used
-                resolve(doc.id)
-              } else {
-                console.log(`${doc.data().token}'s isUsed returned ${doc.data().isUsed}`)
-                reject('Token is already used')
-              }
-            } else {
-              reject('Token does not exist')
-            }
-          })
-        }, (error) => {
+        db.collectionGroup('tokens').where('token', '==', `${payload}`).get().then(function (querySnapshot) {
+          querySnapshot.forEach(function (doc) {
+              resolve(doc.id)
+          });
+        }).catch(error => {
           reject(error)
-        })
+        });
       })
     },
     updateToken({commit}, payload) {
@@ -85,6 +77,34 @@ export default new Vuex.Store({
         }).catch((error) => {
           reject(error)
         })
+      })
+    },
+    generateMatric({commit}) {
+      return new Promise((resolve, reject) => {
+        let index
+        db.collection('count').doc('count').get().then( querySnapshot => {
+          index = querySnapshot.data().number
+          index = index + 1
+          db.collection('count').doc('count').update({
+            number: index
+          }).then(() => {
+            resolve(index)
+          }).catch(error => {
+            reject(error)
+          })
+        })
+      })
+    },
+    fetchUser({commit}) {
+      return new Promise((resolve, reject) => {
+        let users = [];
+        db.collection("users").onSnapshot( querySnapshot => {
+          querySnapshot.forEach((doc) => {
+            users.push(doc.data())
+          })
+        })
+
+        commit('COMMIT_USERS', users)
       })
     }
   }

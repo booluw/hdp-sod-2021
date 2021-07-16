@@ -409,7 +409,7 @@ body {
 
 .form__img {
   width: 60%;
-  height: auto;
+  height: 25rem;
   border-radius: 50%;
   display: block;
   margin: 0 auto;
@@ -429,13 +429,14 @@ body {
   background-color: #dd0e3a;
   color: white;
   width: 28rem;
-  margin: 0 auto;
+  margin: 1rem;
   padding: 0 0 2rem;
 }
 
 .id-card__img {
-  height: 20rem;
+  height: 25rem;
   width: 100%;
+  padding: 12.5rem;
 }
 
 .id-card__logo {
@@ -460,6 +461,40 @@ body {
 
 .id-card__dept {
   font-size: 1.5rem;
+}
+
+.modal {
+  background-color: white;
+  width: 80vw;
+  height: 70vh;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    width: 50vw;
+    height: 50vh;
+  }
 }
 
 .section {

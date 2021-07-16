@@ -1,0 +1,27 @@
+.modal {
+  background-color: white;
+  width: 80vw;
+  height: 70vh;
+  border-radius: 1rem;
+  text-align: center;
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(black, .8);
+    z-index: 99;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    width: 50vw;
+    height: 50vh;
+  }
+}

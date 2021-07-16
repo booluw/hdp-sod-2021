@@ -14,6 +14,11 @@ const routes = [
     path: '/congrate-page',
     name: 'paymentConfirmedPage',
     component: () => import(/* webpackChunkName: "payment" */ '../views/About.vue')
+  },
+  {
+    path: '/id',
+    name: 'IDcards',
+    component: () => import(/* webpackChunkName: "ID" */ '../views/Idcards.vue')
   }
 ]
 

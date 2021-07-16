@@ -4,12 +4,13 @@
   background-color: $color-mmr;
   color: white;
   width: 28rem;
-  margin: 0 auto;
+  margin: 1rem;
   padding: 0 0 2rem;
   
   &__img {
-    height: 20rem;
+    height: 25rem;
     width: 100%;
+    padding: 12.5rem;
   }
 
   &__logo {
